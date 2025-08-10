@@ -31,9 +31,6 @@ header {
     font-size: 2rem;
     letter-spacing: 8px;
     text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 2px;
     background: linear-gradient(90deg, #6dd5ed 0%, #b366f6 50%, #ff6e7f 100%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -44,29 +41,6 @@ header {
 }
 .logo:hover {
     transform: scale(1.08) rotate(-2deg);
-}
-
-.logo span {
-    font-size: 2rem;
-    font-weight: 700;
-}
-#logo-first-char {
-    animation-delay: 0.2s;
-}
-#logo-second-char {
-    animation-delay: 0.4s;
-}
-#logo-third-char {
-    animation-delay: 0.6s;
-}
-#logo-fourth-char {
-    animation-delay: 0.8s;
-}
-#logo-fiveth-char {
-    animation-delay: 1s;
-}
-#logo-sixth-char {
-    animation-delay: 1.2s;
 }
 
 .nav-links {
@@ -105,7 +79,6 @@ main {
 
 section {
     margin: 0 auto 48px auto;
-    max-width: 1100px;
     width: 95%;
     border-radius: 18px;
     background: rgba(32, 36, 48, 0.85);
@@ -150,7 +123,7 @@ section h2 {
     transition: transform 0.4s;
 }
 .image-container:hover {
-    transform: scale(1.04) rotate(-2deg);
+    transform: scale(1.04);
     box-shadow: 0 6px 32px #ff6e7f80;
 }
 .image-container img:hover {
@@ -169,6 +142,7 @@ section h2 {
 }
 .about-me-container:hover {
     border-color: #b366f6;
+    box-shadow: 0 6px 32px #b366f6a0;
 }
 .about-me-container h2 {
     color: #6dd5ed;
@@ -303,6 +277,7 @@ li span svg {
 }
 .edu-container:hover {
     border-color: #b366f6;
+    box-shadow: 0 6px 32px #b366f6a0;
 }
 .edu-container h3 {
     color: #b366f6;
@@ -338,6 +313,7 @@ li span svg {
 }
 .credential-projects:hover {
     border-color: #b366f6;
+    box-shadow: 0 6px 32px #b366f6a0;
 }
 .credential-projects h3 {
     color: #b366f6;
@@ -370,6 +346,7 @@ li span svg {
 }
 .contact-container:hover {
     border-color: #b366f6;
+    box-shadow: 0 6px 32px #b366f6a0;
 }
 .contact-info {
     font-size: 1.15rem;
@@ -427,7 +404,7 @@ footer {
     text-align: center;
     padding: 18px 0;
     background: rgba(24, 28, 36, 0.98);
-    color: #b366f6;
+
     font-size: 1rem;
     border-top: 1px solid #23283b;
     margin-top: 32px;
