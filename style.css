@@ -294,6 +294,7 @@ li span svg {
     width: 1.5rem;
     height: 1.5rem;
     color: #6dd5ed;
+    fill: white;
 }
 .edu-detail {
     display: flex;
