@@ -143,7 +143,7 @@ main section {
 }
 
 .about-me-container h2 {
-    color: red;
+    color: rgb(95, 95, 216);
     text-align: center;
     font-size: 1.875rem;
     line-height: 2.2rem;
@@ -163,19 +163,19 @@ main section {
     flex-direction: column;
 }
 
-#work h2 {
+section h2 {
     text-align: center;
     font-size: 1.875rem;
     line-height: 2.2rem;
     font-weight: 900;
-    color: red;
+    color: rgb(95, 95, 216);
 }
 
 .experience-container {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding-left: 60px;
     padding-right: 60px;
 }
@@ -228,6 +228,7 @@ li {
 
 li span {
     font-weight: 400;
+    color: black;
 }
 
 li span svg {
@@ -235,6 +236,67 @@ li span svg {
     height: 20px;
     margin-right: 10px;
     color: blue;
+}
+
+.credential-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.credential-edu-certificate {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.edu-container {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(95, 95, 216);
+    padding: 10px;
+    border: 2px solid rgb(95, 95, 216);
+    border-radius: 10px;
+}
+
+.edu-item {
+    display: flex;
+    align-items: center;
+}
+
+.edu-svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 10px;
+}
+
+.edu-detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.credential-projects {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(95, 95, 216);
+    padding: 10px;
+    border: 2px solid rgb(95, 95, 216);
+    border-radius: 10px;
+}
+
+.project-desc {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 5px;
+}
+
+.project-tech {
+    font-size: 0.9rem;
+    color: #666;
+    display: flex;
+    align-items: center;
 }
 
 footer {
