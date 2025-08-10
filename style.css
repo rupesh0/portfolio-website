@@ -416,6 +416,10 @@ footer {
 
 /* Responsive Styles */
 @media (max-width: 900px) {
+    #home {
+        align-items: center;
+    }
+
     .home-container,
     .credential-edu-certificate {
         flex-direction: column;
