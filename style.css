@@ -84,6 +84,7 @@ section {
     box-shadow: 0 4px 32px rgba(0, 0, 0, 0.18);
     border: 1px solid #23283b;
     padding: 40px 32px;
+    scroll-margin-top: 120px;
 }
 
 section h2 {
@@ -428,6 +429,7 @@ footer {
     }
     section {
         padding: 28px 10px;
+        scroll-margin-top: 120px;
     }
     .about-me-container,
     .image-container,
@@ -455,6 +457,7 @@ footer {
     }
     section {
         padding: 16px 2px;
+        scroll-margin-top: 140px;
     }
     .contact-buttons a {
         padding: 10px 16px;
