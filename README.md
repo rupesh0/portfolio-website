@@ -1,44 +1,43 @@
 # Portfolio Website
 
-This is a simple portfolio website project that showcases personal work and skills. It is structured to provide a clean and responsive design.
+This is a personal portfolio website for Rupesh Prajapat, Senior Salesforce Developer.  
+It showcases professional experience, credentials, projects, and contact information.
 
-## Project Structure
+## Features
 
-```
-portfolio-website
-├── src
-│   ├── index.html       # Main HTML document for the portfolio website
-│   ├── style.css       # CSS styles for the portfolio website
-│   └── script.js       # JavaScript code for interactivity
-└── README.md           # Documentation for the project
-```
+-   Responsive, mobile-first design
+-   Work experience timeline
+-   Education and certifications (with downloadable certificates)
+-   Project highlights
+-   Contact section with email and social profiles (GitHub, LinkedIn, Salesforce Trailblazer)
+-   SVG icons with color and hover effects
 
-## Getting Started
+## Tech Stack
 
-To get started with this project, follow these steps:
-
-1. **Clone the repository**:
-   ```
-   git clone <repository-url>
-   ```
-
-2. **Navigate to the project directory**:
-   ```
-   cd portfolio-website
-   ```
-
-3. **Open the `index.html` file** in your web browser to view the portfolio.
+-   HTML5
+-   CSS3 (custom, no frameworks)
+-   JavaScript (for future enhancements)
 
 ## Usage
 
-- The `index.html` file contains the structure of the website.
-- The `style.css` file is used to style the website. You can modify it to change the appearance.
-- The `script.js` file can be used to add interactivity. You can add your JavaScript code here.
+1. Clone or download the repository.
+2. Open `index.html` in your browser.
+3. All assets are local except fonts (Google Fonts).
 
-## Contributing
+## Customization
 
-If you would like to contribute to this project, please fork the repository and submit a pull request with your changes.
+-   Update content in `index.html` for your own details.
+-   Change styles in `style.css` as needed.
+-   Add certificates or images in the `images` folder.
 
 ## License
 
-This project is open-source and available under the [MIT License](LICENSE).
+This project is for personal use and demonstration.  
+Feel free to fork and adapt for your own portfolio.
+
+---
+
+**Contact:**  
+Email: rupesh.p9696@gmail.com  
+LinkedIn: [rupesh-prajapat](https://www.linkedin.com/in/rupesh-prajapat/)  
+GitHub: [rupesh0](https://github.com/rupesh0)
