@@ -284,6 +284,16 @@ li:hover span {
     color: #e3e6ee;
 }
 
+.certification-link {
+    color: #6dd5ed;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.certification-link:hover {
+    color: #b366f6;
+}
+
 .credential-projects {
     background: rgba(36, 40, 56, 0.92);
     border-radius: 12px;
