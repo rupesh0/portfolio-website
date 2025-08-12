@@ -226,7 +226,7 @@ li {
     color: #e3e6ee;
     transition: color 0.2s;
 }
-li:hover span:last-child {
+li:hover span {
     color: #b366f6;
 }
 
