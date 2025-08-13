@@ -96,7 +96,7 @@ section h2 {
     letter-spacing: 2px;
 }
 
-.home-container {
+.about-container {
     display: flex;
     flex-wrap: wrap;
     gap: 2.5rem;
@@ -104,7 +104,7 @@ section h2 {
     justify-content: center;
 }
 
-.image-container {
+.about-me-image-container {
     flex-basis: 260px;
     min-width: 220px;
     max-width: 320px;
@@ -115,17 +115,17 @@ section h2 {
     background: #23283b;
     transition: transform 0.3s, box-shadow 0.3s;
 }
-.image-container img {
+.about-me-image-container img {
     width: 100%;
     display: block;
     border-radius: 16px;
     transition: transform 0.4s;
 }
-.image-container:hover {
+.about-me-image-container:hover {
     transform: scale(1.04);
     box-shadow: 0 6px 32px #ff6e7f80;
 }
-.image-container img:hover {
+.about-me-image-container img:hover {
     transform: scale(1.12);
 }
 
@@ -437,11 +437,11 @@ footer {
 
 /* Responsive Styles */
 @media (max-width: 900px) {
-    #home {
+    #about {
         align-items: center;
     }
 
-    .home-container,
+    .about-container,
     .credential-edu-certificate {
         flex-direction: column;
         align-items: stretch;
@@ -452,7 +452,7 @@ footer {
         scroll-margin-top: 120px;
     }
     .about-me-container,
-    .image-container,
+    .about-me-image-container,
     .edu-container,
     .credential-projects {
         min-width: 0;
