@@ -96,6 +96,7 @@ section h2 {
     letter-spacing: 2px;
 }
 
+/* Home Section */
 .home-container {
     display: flex;
     flex-direction: column;
@@ -120,18 +121,58 @@ section h2 {
     gap: 1.5rem;
 }
 
+.home-framework,
+.home-skill,
+.home-certificate,
+.home-container-image {
+    overflow: visible;
+    padding: 18px;
+    background: rgba(36, 40, 56, 0.92);
+    border-radius: 22px;
+    box-shadow: 0 2px 24px #6dd5ed40;
+    position: relative;
+    transition: box-shadow 0.3s, background 0.3s;
+}
+
 .home-framework {
     flex-basis: 30%;
     min-width: 180px;
     max-width: 260px;
-    border-radius: 16px;
-    overflow: hidden;
 }
 
-.home-framework img {
+.home-framework img,
+.home-skill img,
+.home-certificate img,
+.home-container-image img {
     width: 100%;
     height: auto;
     display: block;
+    animation: floatUpDown 3.5s ease-in-out infinite;
+    transition: transform 0.35s, box-shadow 0.35s, filter 0.35s;
+    box-shadow: 0 2px 24px #b366f6a0;
+    border-radius: 16px;
+    filter: brightness(0.97) saturate(1.1);
+    position: relative;
+    z-index: 1;
+}
+
+.home-framework img:hover,
+.home-skill img:hover,
+.home-certificate img:hover,
+.home-container-image img:hover {
+    transform: scale(1.18) rotate(-2deg);
+    box-shadow: 0 12px 48px #ff6e7f80, 0 0 24px #b366f6;
+    filter: brightness(1.15) saturate(1.3) drop-shadow(0 0 12px #b366f6);
+    z-index: 2;
+}
+
+.home-framework:hover,
+.home-skill:hover,
+.home-certificate:hover,
+.home-container-image:hover {
+    box-shadow: 0 8px 32px #b366f6a0, 0 0 32px #ff6e7f80;
+    background: rgba(36, 40, 56, 0.98);
+    z-index: 2;
 }
 
 .home-certifications {
@@ -146,38 +187,49 @@ section h2 {
     min-width: 80px;
     max-width: 120px;
     border-radius: 16px;
-    overflow: hidden;
-}
-
-.home-certificate img {
-    width: 100%;
-    height: auto;
-    display: block;
 }
 
 .home-container-image {
     flex-basis: 260px;
     min-width: 220px;
     max-width: 320px;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 2px 24px #b366f6a0;
-    border: 2px solid #b366f6;
-    background: #23283b;
-    transition: transform 0.3s, box-shadow 0.3s;
+    border: 4px solid transparent;
+    background-clip: padding-box;
 }
-.home-container-image img {
-    width: 100%;
-    display: block;
-    border-radius: 16px;
-    transition: transform 0.4s;
+.home-container-image::before {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border-radius: 26px;
+    z-index: 0;
+    pointer-events: none;
+    background: linear-gradient(120deg, #6dd5ed, #b366f6, #ff6e7f);
+    opacity: 0.7;
+    filter: blur(4px);
+    animation: borderGlow 3s linear infinite;
 }
-.home-container-image:hover {
-    transform: scale(1.04);
-    box-shadow: 0 6px 32px #ff6e7f80;
+@keyframes borderGlow {
+    0% {
+        opacity: 0.7;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.7;
+    }
 }
-.home-container-image img:hover {
-    transform: scale(1.12);
+
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .home-skills {
@@ -193,15 +245,9 @@ section h2 {
     min-width: 80px;
     max-width: 120px;
     border-radius: 16px;
-    overflow: hidden;
 }
 
-.home-skills img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
+/* About Section */
 .about-container {
     display: flex;
     flex-wrap: wrap;
@@ -263,6 +309,7 @@ section h2 {
     color: #b366f6;
 }
 
+/* Experience Section */
 .experience-container {
     display: flex;
     flex-direction: column;
@@ -336,6 +383,7 @@ li:hover span {
     color: #b366f6;
 }
 
+/* Credentials Section */
 .credential-container {
     display: flex;
     flex-direction: column;
@@ -395,7 +443,6 @@ li:hover span {
     text-decoration: none;
     transition: color 0.2s;
 }
-
 .certification-link:hover {
     color: #b366f6;
 }
@@ -431,6 +478,7 @@ li:hover span {
     margin-top: 2px;
 }
 
+/* Contact Section */
 .contact-container {
     background: rgba(36, 40, 56, 0.92);
     border-radius: 14px;
@@ -546,7 +594,6 @@ footer {
     #about {
         align-items: center;
     }
-
     .about-container,
     .credential-edu-certificate {
         flex-direction: column;
@@ -588,5 +635,15 @@ footer {
     .contact-buttons a {
         padding: 10px 16px;
         font-size: 0.98rem;
+    }
+    .home-framework,
+    .home-skill,
+    .home-certificate,
+    .home-container-image {
+        padding: 8px;
+        border-radius: 16px;
+    }
+    .home-container-image::before {
+        border-radius: 20px;
     }
 }
