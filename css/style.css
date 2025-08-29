@@ -116,12 +116,26 @@ section h2 {
 }
 
 .home-left {
-    flex-basis: 280px;
-    max-width: 360px;
+    flex-basis: 320px;
+    max-width: 480px;
+    overflow: hidden;
+    border: #b366f6 4px solid;
+    border-radius: 12px;
+}
+
+.home-left:hover {
+    transition: transform 0.3s;
+    box-shadow: 0 6px 32px #b366f6a0;
 }
 
 .profile-pic {
+    display: block;
     width: 100%;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
 }
 
 .home-right {
@@ -182,6 +196,14 @@ section h2 {
     border-radius: 12px;
     padding: 12px;
     background-color: #f5b400;
+}
+
+.skill:hover {
+    background-color: #6dd5ed;
+    color: #000;
+    transform: scale(1.05);
+    transition: all 0.2s;
+    box-shadow: 0 4px 16px #6dd5ed80;
 }
 
 /* About Section */
