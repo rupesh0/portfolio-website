@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: "Inter", Arial, sans-serif;
+    text-shadow: 2px 2px 5px #000000;
 }
 
 body {
@@ -39,6 +40,10 @@ header {
     -webkit-text-fill-color: transparent;
     cursor: pointer;
     transition: transform 0.2s;
+}
+
+.logo span {
+    text-shadow: none;
 }
 
 .logo:hover {
@@ -93,7 +98,7 @@ section {
     width: 95%;
     border-radius: 18px;
     background: rgba(32, 36, 48, 0.85);
-    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.75);
     border: 1px solid #23283b;
     padding: 40px 32px;
     scroll-margin-top: 120px;
@@ -148,7 +153,6 @@ section h2 {
 
 .greeting {
     font-size: clamp(18px, 2vw, 24px);
-    font-weight: bold;
     margin-bottom: 10px;
     text-align: left;
     color: #fff;
@@ -156,20 +160,20 @@ section h2 {
 
 .name {
     font-size: clamp(26px, 4vw, 40px);
-    font-weight: 900;
+    font-weight: 300;
     margin-bottom: 10px;
     color: #fff;
 }
 
 .name span {
-    font-weight: 300;
+    font-weight: 600;
     color: #f5b400;
     border-bottom: 2px solid #f5b400;
 }
 
 .role {
     background: #f5b400;
-    color: #000;
+    color: wheat;
     font-weight: bold;
     padding: 4px 10px;
     display: inline-block;
@@ -200,7 +204,7 @@ section h2 {
 
 .skill:hover {
     background-color: #6dd5ed;
-    color: #000;
+    color: #fff;
     transform: scale(1.05);
     transition: all 0.2s;
     box-shadow: 0 4px 16px #6dd5ed80;
@@ -560,7 +564,7 @@ section h2 {
 }
 .contact-buttons a:hover {
     background: linear-gradient(90deg, #b366f6 0%, #ff6e7f 100%);
-    color: #23283b;
+    color: #fff;
     box-shadow: 0 4px 16px #ff6e7f80;
 }
 
