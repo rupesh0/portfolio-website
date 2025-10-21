@@ -1,5 +1,6 @@
 import "./HomeSection.css";
 import rupeshPic from "../assets/images/rupesh.jpg";
+import { SKILLS } from "../textHelper/constants";
 
 function HomeSection() {
     return (
@@ -27,20 +28,15 @@ function HomeSection() {
                 </p>
                 <div class="role">Technical Skills</div>
                 <div class="skills">
-                    <div class="skill">Salesforce</div>
-                    <div class="skill">Lightning Web Components</div>
-                    <div class="skill">Bryntum Grid</div>
-                    <div class="skill">Bryntum Scheduler</div>
-                    <div class="skill">Apex</div>
-                    <div class="skill">SOQL</div>
-                    <div class="skill">SOSL</div>
-                    <div class="skill">HTML</div>
-                    <div class="skill">CSS</div>
-                    <div class="skill">JavaScript</div>
-                    <div class="skill">Jest</div>
+                    {SKILLS.map((skill, index) => (
+                        <div class="skill" key={index}>
+                            {skill}
+                        </div>
+                    ))}
                 </div>
             </div>
         </section>
     );
 }
+
 export default HomeSection;
