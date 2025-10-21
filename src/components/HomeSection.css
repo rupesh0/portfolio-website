@@ -1,0 +1,116 @@
+section {
+    margin: 0 auto 48px auto;
+    width: 95%;
+    border-radius: 18px;
+    background: rgba(32, 36, 48, 0.85);
+    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.75);
+    border: 1px solid #23283b;
+    padding: 40px 32px;
+    scroll-margin-top: 120px;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #b366f6;
+    margin-bottom: 24px;
+    letter-spacing: 2px;
+}
+
+/* Home Section */
+.home-container {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.home-left {
+    flex-basis: 320px;
+    max-width: 480px;
+    overflow: hidden;
+    border: #b366f6 4px solid;
+    border-radius: 12px;
+}
+
+.home-left:hover {
+    transition: transform 0.3s;
+    box-shadow: 0 6px 32px #b366f6a0;
+}
+
+.profile-pic {
+    display: block;
+    width: 100%;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+.home-right {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.greeting {
+    font-size: clamp(18px, 2vw, 24px);
+    margin-bottom: 10px;
+    text-align: left;
+    color: #fff;
+}
+
+.name {
+    font-size: clamp(26px, 4vw, 40px);
+    font-weight: 300;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.name span {
+    font-weight: 600;
+    color: #f5b400;
+    border-bottom: 2px solid #f5b400;
+}
+
+.role {
+    background: #f5b400;
+    color: wheat;
+    font-weight: bold;
+    padding: 4px 10px;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: clamp(12px, 1.5vw, 14px);
+}
+
+.home-right p {
+    color: #fff;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-size: clamp(14px, 1.5vw, 16px);
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill {
+    border: 2px;
+    border-color: #6dd5ed;
+    border-radius: 12px;
+    padding: 12px;
+    background-color: #f5b400;
+}
+
+.skill:hover {
+    background-color: #6dd5ed;
+    color: #fff;
+    transform: scale(1.05);
+    transition: all 0.2s;
+    box-shadow: 0 4px 16px #6dd5ed80;
+}
