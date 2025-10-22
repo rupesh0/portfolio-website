@@ -2,16 +2,26 @@ import "./CredentialSection.css";
 import pd1Link from "../assets/certificates/sf-pd1.pdf";
 import pd2Link from "../assets/certificates/sf-pd2.pdf";
 import jd1Link from "../assets/certificates/sf-jd1.pdf";
-import { EDUCATIONS, PROJECTS } from "../textHelper/constants";
+import { CREDENTIAL_TEXTS } from "../textHelper/english";
 
 function CredentialSection() {
+    const {
+        credentialHeading,
+        certificationsHeading,
+        educationsHeading,
+        projectsHeading,
+        certifications: CERTIFICATIONS,
+        educations: EDUCATIONS,
+        projects: PROJECTS,
+    } = CREDENTIAL_TEXTS;
+
     return (
         <section id="credential">
-            <h2>Credentials</h2>
+            <h2>{credentialHeading}</h2>
             <div class="credential-container">
                 <div class="credential-edu-certificate">
                     <div class="edu-container">
-                        <h3>Education</h3>
+                        <h3>{educationsHeading}</h3>
                         <ul>
                             {EDUCATIONS.map((education, index) => (
                                 <li class="edu-item" key={index}>
@@ -31,7 +41,7 @@ function CredentialSection() {
                         </ul>
                     </div>
                     <div class="edu-container">
-                        <h3>Certificates</h3>
+                        <h3>{certificationsHeading}</h3>
                         <ul class="certificate-list">
                             <li>
                                 <svg
@@ -97,7 +107,7 @@ function CredentialSection() {
                     </div>
                 </div>
                 <div class="credential-projects">
-                    <h3>Projects</h3>
+                    <h3>{projectsHeading}</h3>
                     <ul class="project-list">
                         {PROJECTS.map((project, index) => (
                             <li key={index}>

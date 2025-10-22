@@ -1,9 +1,19 @@
-const ABOUT_ME = [
-    "I'm Rupesh Prajapat, a Senior Salesforce Developer with over 4 years of experience designing and developing robust solutions on the Salesforce platform. I specialize in Lightning Web Components (LWC), Apex, and building high-performance UIs using Bryntum Grid and Scheduler. My work focuses on creating user-friendly interfaces and scalable backend logic aligned with business needs.",
-    "Currently at Metacube, I contribute to the development of the Professional Services Automation (PSA) product by Certinia (formerly FinancialForce). I’ve taken on key responsibilities like managing release cycles, mentoring team members, and solving complex technical challenges.",
-    "I'm certified in Salesforce PD1, PD2, and JD1, and have hands-on experience with tools like VS Code, Git, Jenkins, and JIRA. My journey started with core programming in C++ and evolved into building enterprise-grade Salesforce applications, including internal tools like a Permission Visualizer App.",
-    "Outside of work, I enjoy mentoring new developers, staying up-to-date with emerging technologies, and contributing to team growth.",
-];
+/**
+ * Header Component Texts in English
+ */
+
+const HEADER_TEXTS = {
+    name: "Rupesh",
+    home: "Home",
+    about: "About",
+    work: "Work",
+    credential: "Credential",
+    contact: "Contact",
+};
+
+/**
+ * Home page texts in English
+ */
 
 const SKILLS = [
     "Salesforce",
@@ -21,6 +31,38 @@ const SKILLS = [
     "Jenkins",
     "JIRA",
 ];
+
+const HOME_TEXTS = {
+    profilePicAlt: "Rupesh Prajapat Pic.",
+    greeting: "HI THERE!",
+    intro1: "I'M",
+    intro2: "RUPESH",
+    role: "Senior Software Engineer / Salesforce Developer / PSA Consultant",
+    description:
+        "I’m a Salesforce Developer and Full-Stack Engineer passionate about building scalable applications and seamless user experiences.",
+    technicalSkills: "Technical Skills",
+    skills: SKILLS,
+};
+
+/**
+ * About Me section texts in English
+ */
+
+const ABOUT_ME = [
+    "I'm Rupesh Prajapat, a Senior Salesforce Developer with over 4 years of experience designing and developing robust solutions on the Salesforce platform. I specialize in Lightning Web Components (LWC), Apex, and building high-performance UIs using Bryntum Grid and Scheduler. My work focuses on creating user-friendly interfaces and scalable backend logic aligned with business needs.",
+    "Currently at Metacube, I contribute to the development of the Professional Services Automation (PSA) product by Certinia (formerly FinancialForce). I’ve taken on key responsibilities like managing release cycles, mentoring team members, and solving complex technical challenges.",
+    "I'm certified in Salesforce PD1, PD2, and JD1, and have hands-on experience with tools like VS Code, Git, Jenkins, and JIRA. My journey started with core programming in C++ and evolved into building enterprise-grade Salesforce applications, including internal tools like a Permission Visualizer App.",
+    "Outside of work, I enjoy mentoring new developers, staying up-to-date with emerging technologies, and contributing to team growth.",
+];
+
+const ABOUT_ME_TEXTS = {
+    aboutMeHeading: "About Me",
+    aboutMeParagraphs: ABOUT_ME,
+};
+
+/**
+ * Work Experience section texts in English
+ */
 
 const WORK_EXPERIENCES = [
     {
@@ -58,6 +100,15 @@ const WORK_EXPERIENCES = [
         ],
     },
 ];
+
+const WORK_EXPERIENCE_TEXTS = {
+    workExperienceHeading: "Work Experience",
+    workExperiences: WORK_EXPERIENCES,
+};
+
+/**
+ * Credential section texts in English
+ */
 
 const CERTIFICATIONS = [
     "Salesforce Platform Developer I",
@@ -103,11 +154,49 @@ const PROJECTS = [
     },
 ];
 
+const CREDENTIAL_TEXTS = {
+    credentialHeading: "Credentials",
+    certificationsHeading: "Certifications",
+    educationsHeading: "Education",
+    projectsHeading: "Projects",
+    certifications: CERTIFICATIONS,
+    educations: EDUCATIONS,
+    projects: PROJECTS,
+};
+
+/**
+ * Contact section texts in English
+ */
+
+const CONTACT_TEXTS = {
+    contactHeading: "Get in Touch",
+    contactDescription:
+        "I'm currently open to new opportunities and collaborations. Whether you have a question, a project idea, or just want to connect, feel free to reach out!",
+    email: "Email",
+    emailAddress: "rupesh.p9696@gmail.com",
+    socialProfiles: "Social Profiles",
+    githubLink: "https://github.com/rupesh0",
+    linkedInLink: "https://www.linkedin.com/in/rupesh-prajapat/",
+    trailheadLink: "https://trailhead.salesforce.com/en/me/rupesh.prajapat",
+    emailMe: "Email Me",
+    linkedIn: "LinkedIn",
+    downloadResume: "Download Resume",
+};
+
+/**
+ * Footer Component Texts in English
+ */
+
+const FOOTER_TEXTS = {
+    copyright: "© 2025 Rupesh Prajapat. All rights reserved.",
+};
+
 export {
-    ABOUT_ME,
-    SKILLS,
-    WORK_EXPERIENCES,
-    CERTIFICATIONS,
-    EDUCATIONS,
-    PROJECTS,
+    HEADER_TEXTS,
+    HOME_TEXTS,
+    ABOUT_ME_TEXTS,
+    WORK_EXPERIENCE_TEXTS,
+    CREDENTIAL_TEXTS,
+    CONTACT_TEXTS,
+    FOOTER_TEXTS,
 };

@@ -1,10 +1,13 @@
 import "./Header.css";
+import { HEADER_TEXTS } from "../textHelper/english";
 
 function Header() {
+    const { name, home, about, work, credential, contact } = HEADER_TEXTS;
+
     return (
         <header>
             <a class="logo" href="#home">
-                <span>RUPESH</span>
+                <span>{name}</span>
             </a>
             <a
                 class="menu-icon"
@@ -32,19 +35,19 @@ function Header() {
             </a>
             <nav class="nav-links">
                 <a class="nav-link" href="#home">
-                    Home
+                    {home}
                 </a>
                 <a class="nav-link" href="#about">
-                    About
+                    {about}
                 </a>
                 <a class="nav-link" href="#work">
-                    Work
+                    {work}
                 </a>
                 <a class="nav-link" href="#credential">
-                    Credential
+                    {credential}
                 </a>
                 <a class="nav-link" href="#contact">
-                    Contact
+                    {contact}
                 </a>
             </nav>
         </header>

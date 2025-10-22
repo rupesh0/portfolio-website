@@ -1,15 +1,27 @@
 import "./ContactSection.css";
 import resumeLink from "../assets/resume.pdf";
 
+import { CONTACT_TEXTS } from "../textHelper/english";
+
 function ContactSection() {
+    const {
+        contactHeading,
+        contactDescription,
+        email,
+        emailAddress,
+        socialProfiles,
+        githubLink,
+        linkedInLink,
+        trailheadLink,
+        emailMe,
+        linkedIn,
+        downloadResume,
+    } = CONTACT_TEXTS;
     return (
         <section id="contact">
-            <h2>Get In Touch</h2>
+            <h2>{contactHeading}</h2>
             <div class="contact-container">
-                <div class="contact-info">
-                    I'm open to discussing new projects, creative ideas, or
-                    opportunities to collaborate.
-                </div>
+                <div class="contact-info">{contactDescription}</div>
                 <div class="contact-form">
                     <div class="contact-item">
                         <div class="contact-box">
@@ -33,13 +45,13 @@ function ContactSection() {
                                 </svg>
                             </div>
                             <div class="contact-box-content">
-                                <h5>Email</h5>
+                                <h5>{email}</h5>
                                 <div>
                                     <a
                                         class="contact-link-email"
-                                        href="mailto:rupesh.p9696@gmail.com"
+                                        href={`mailto:${emailAddress}`}
                                     >
-                                        rupesh.p9696@gmail.com
+                                        {emailAddress}
                                     </a>
                                 </div>
                             </div>
@@ -59,12 +71,9 @@ function ContactSection() {
                                 </svg>
                             </div>
                             <div class="contact-box-content">
-                                <h5>Social Profiles</h5>
+                                <h5>{socialProfiles}</h5>
                                 <div class="social-icons">
-                                    <a
-                                        href="https://github.com/rupesh0"
-                                        target="_blank"
-                                    >
+                                    <a href={githubLink} target="_blank">
                                         <svg
                                             class="social-icon"
                                             fill="currentColor"
@@ -73,10 +82,7 @@ function ContactSection() {
                                             <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.237 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
                                         </svg>
                                     </a>
-                                    <a
-                                        href="https://www.linkedin.com/in/rupesh-prajapat/"
-                                        target="_blank"
-                                    >
+                                    <a href={linkedInLink} target="_blank">
                                         <svg
                                             class="social-icon"
                                             fill="currentColor"
@@ -85,10 +91,7 @@ function ContactSection() {
                                             <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
                                         </svg>
                                     </a>
-                                    <a
-                                        href="https://www.salesforce.com/trailblazer/rprajapat29"
-                                        target="_blank"
-                                    >
+                                    <a href={trailheadLink} target="_blank">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             fill="#000000"
@@ -130,12 +133,9 @@ function ContactSection() {
                                         class="icon-style"
                                     />
                                 </svg>
-                                <span>Email Me</span>
+                                <span>{emailMe}</span>
                             </a>
-                            <a
-                                href="https://www.linkedin.com/in/rupesh-prajapat/"
-                                target="_blank"
-                            >
+                            <a href={linkedInLink} target="_blank">
                                 <svg
                                     class="social-icon"
                                     fill="currentColor"
@@ -143,7 +143,7 @@ function ContactSection() {
                                 >
                                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
                                 </svg>
-                                <span>LinkedIn</span>
+                                <span>{linkedIn}</span>
                             </a>
                         </div>
                         <div class="contact-buttons">
@@ -156,7 +156,7 @@ function ContactSection() {
                                 >
                                     <path d="M145.228 0h221.545c39.962 0 76.279 16.334 102.59 42.638C495.666 68.942 512 105.262 512 145.224v221.549c0 39.962-16.334 76.279-42.637 102.59-26.311 26.303-62.624 42.638-102.59 42.638H145.228c-39.962 0-76.279-16.335-102.59-42.638C16.334 443.052 0 406.735 0 366.773V145.224c0-39.962 16.334-76.282 42.638-102.586C68.949 16.334 105.266 0 145.228 0zM202.9 215.333c-4.071.172-6.963 1.523-8.631 4.063-4.531 6.793 1.65 13.502 5.943 18.232 12.174 13.362 42.015 45.476 48.023 52.542 4.553 5.036 11.036 5.036 15.592 0 6.206-7.25 37.545-40.826 49.118-53.825 4.015-4.52 8.982-10.69 4.801-16.949-1.707-2.54-4.571-3.891-8.641-4.063H284.39V154.11c0-6.523-5.353-11.875-11.879-11.875h-33.007c-6.53 0-11.878 5.345-11.878 11.875v61.223H202.9zm-79.47 67.616c-3.782-15.646 19.91-21.387 23.689-5.734 1.581 6.526 2.939 13.089 4.246 19.676 2.438 12.315 4.243 20.034 8.788 23.88 4.816 4.074 13.918 5.482 31.368 5.482h132.085c16.107 0 24.514-1.542 28.933-5.54 4.257-3.846 5.925-11.381 8.086-22.947l.047-.226c1.271-6.804 2.586-13.601 4.221-20.325 3.778-15.639 27.446-9.919 23.689 5.705l-.007.025c-1.542 6.397-2.77 12.823-3.969 19.288l-.004.025c-3.184 17.037-5.788 28.724-14.523 36.936-8.604 8.086-22.082 11.508-46.473 11.508H191.521c-25.5 0-39.515-3.069-48.527-11.05-9.238-8.183-12.04-20.058-15.606-38.082-1.235-6.227-2.464-12.451-3.958-18.621zm21.798-256.764h221.545c65.477 0 119.043 53.566 119.043 119.039v221.549c0 65.477-53.566 119.043-119.043 119.043H145.228c-65.477 0-119.043-53.566-119.043-119.043V145.224c0-65.473 53.566-119.039 119.043-119.039z" />
                                 </svg>
-                                <span>Download Resume</span>
+                                <span>{downloadResume}</span>
                             </a>
                         </div>
                     </div>

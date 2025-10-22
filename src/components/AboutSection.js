@@ -1,10 +1,11 @@
 import "./AboutSection.css";
-import { ABOUT_ME } from "../textHelper/constants";
+import { ABOUT_ME_TEXTS } from "../textHelper/english";
 
 function AboutSection() {
+    const { aboutMeHeading, aboutMeParagraphs: ABOUT_ME } = ABOUT_ME_TEXTS;
     return (
         <section id="about" class="about-container">
-            <h2>About Me</h2>
+            <h2>{aboutMeHeading}</h2>
             <div class="about-me-container">
                 {ABOUT_ME.map((paragraph, index) => (
                     <p key={index}>{paragraph}</p>

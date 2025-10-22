@@ -1,10 +1,12 @@
 import "./WorkSection.css";
-import { WORK_EXPERIENCES } from "../textHelper/constants";
+import { WORK_EXPERIENCE_TEXTS } from "../textHelper/english";
 
 function WorkSection() {
+    const { workExperienceHeading, workExperiences: WORK_EXPERIENCES } =
+        WORK_EXPERIENCE_TEXTS;
     return (
         <section id="work">
-            <h2>Work Experience</h2>
+            <h2>{workExperienceHeading}</h2>
             <div class="experience-container">
                 {WORK_EXPERIENCES.map((experience, index) => (
                     <div class="experience-item" key={index}>

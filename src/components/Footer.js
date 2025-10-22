@@ -1,4 +1,8 @@
+import { FOOTER_TEXTS } from "../textHelper/english";
+
 function Footer() {
+    const { copyright } = FOOTER_TEXTS;
+
     return (
         <footer
             style={{
@@ -10,7 +14,7 @@ function Footer() {
                 marginTop: "32px",
             }}
         >
-            <p>&copy; 2025 Rupesh Prajapat. All rights reserved.</p>
+            <p>{copyright}</p>
         </footer>
     );
 }

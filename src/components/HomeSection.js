@@ -1,32 +1,33 @@
 import "./HomeSection.css";
 import rupeshPic from "../assets/images/rupesh.jpg";
-import { SKILLS } from "../textHelper/constants";
+import { HOME_TEXTS } from "../textHelper/english";
 
 function HomeSection() {
+    const {
+        profilePicAlt,
+        greeting,
+        intro1,
+        intro2,
+        role,
+        description,
+        technicalSkills,
+        skills: SKILLS,
+    } = HOME_TEXTS;
+
     return (
         <section id="home" class="home-container">
             <div class="home-left">
-                <img
-                    class="profile-pic"
-                    src={rupeshPic}
-                    alt="Rupesh Prajapat Pic."
-                />
+                <img class="profile-pic" src={rupeshPic} alt={profilePicAlt} />
             </div>
             <div class="home-right">
-                <div class="greeting">HI THERE!</div>
+                <div class="greeting">{greeting}</div>
                 <div class="name">
-                    I'M <span>RUPESH</span>
+                    {intro1}
+                    <span>{intro2}</span>
                 </div>
-                <div class="role">
-                    Senior Software Engineer / Salesforce Developer / PSA
-                    Consultant
-                </div>
-                <p>
-                    I’m a Salesforce Developer and Full-Stack Engineer
-                    passionate about building scalable applications and seamless
-                    user experiences.
-                </p>
-                <div class="role">Technical Skills</div>
+                <div class="role">{role}</div>
+                <p>{description}</p>
+                <div class="role">{technicalSkills}</div>
                 <div class="skills">
                     {SKILLS.map((skill, index) => (
                         <div class="skill" key={index}>
