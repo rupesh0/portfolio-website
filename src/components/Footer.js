@@ -1,4 +1,4 @@
-import { FOOTER_TEXTS } from "../textHelper/english";
+import { FOOTER_TEXTS } from "../textHelper/i18n";
 
 function Footer() {
     const { copyright } = FOOTER_TEXTS;

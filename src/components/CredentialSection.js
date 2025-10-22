@@ -2,7 +2,7 @@ import "./CredentialSection.css";
 import pd1Link from "../assets/certificates/sf-pd1.pdf";
 import pd2Link from "../assets/certificates/sf-pd2.pdf";
 import jd1Link from "../assets/certificates/sf-jd1.pdf";
-import { CREDENTIAL_TEXTS } from "../textHelper/english";
+import { CREDENTIAL_TEXTS } from "../textHelper/i18n";
 
 function CredentialSection() {
     const {

@@ -1,7 +1,7 @@
 import "./ContactSection.css";
 import resumeLink from "../assets/resume.pdf";
 
-import { CONTACT_TEXTS } from "../textHelper/english";
+import { CONTACT_TEXTS } from "../textHelper/i18n";
 
 function ContactSection() {
     const {

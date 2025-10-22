@@ -1,6 +1,6 @@
 import "./HomeSection.css";
 import rupeshPic from "../assets/images/rupesh.jpg";
-import { HOME_TEXTS } from "../textHelper/english";
+import { HOME_TEXTS } from "../textHelper/i18n";
 
 function HomeSection() {
     const {
@@ -22,8 +22,7 @@ function HomeSection() {
             <div class="home-right">
                 <div class="greeting">{greeting}</div>
                 <div class="name">
-                    {intro1}
-                    <span>{intro2}</span>
+                    {intro1} <span>{intro2}</span>
                 </div>
                 <div class="role">{role}</div>
                 <p>{description}</p>

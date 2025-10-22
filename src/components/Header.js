@@ -1,5 +1,5 @@
 import "./Header.css";
-import { HEADER_TEXTS } from "../textHelper/english";
+import { HEADER_TEXTS } from "../textHelper/i18n";
 
 function Header() {
     const { name, home, about, work, credential, contact } = HEADER_TEXTS;
