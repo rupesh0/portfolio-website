@@ -115,7 +115,7 @@ function ContactSection() {
                     </div>
                     <div class="contact-button-group">
                         <div class="contact-buttons">
-                            <a href="mailto:rupesh.p9696@gmail.com">
+                            <a href={`mailto:${emailAddress}`}>
                                 <svg
                                     class="social-icon"
                                     xmlns="http://www.w3.org/2000/svg"
