@@ -36,6 +36,8 @@ header {
 
 .menu-icon {
     display: none;
+    background-color: transparent;
+    border: none;
 }
 
 .nav-links {

@@ -1,20 +1,27 @@
+import { useState } from "react";
+
 import "./Header.css";
 import { HEADER_TEXTS } from "../textHelper/i18n";
 
 function Header() {
     const { name, home, about, work, credential, contact } = HEADER_TEXTS;
 
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const closeMenu = () => {
+        setMenuOpen(false);
+    };
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
+
     return (
         <header>
             <a class="logo" href="#home">
                 <span>{name}</span>
             </a>
-            <a
-                class="menu-icon"
-                id="menuToggle"
-                href="javascript:void(0);"
-                aria-label="Open menu"
-            >
+            <button class="menu-icon" id="menuToggle" onClick={toggleMenu}>
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
                     <rect y="7" width="32" height="3" rx="1.5" fill="#b366f6" />
                     <rect
@@ -32,21 +39,21 @@ function Header() {
                         fill="#b366f6"
                     />
                 </svg>
-            </a>
-            <nav class="nav-links">
-                <a class="nav-link" href="#home">
+            </button>
+            <nav className={menuOpen ? "nav-links show" : "nav-links"}>
+                <a class="nav-link" href="#home" onClick={closeMenu}>
                     {home}
                 </a>
-                <a class="nav-link" href="#about">
+                <a class="nav-link" href="#about" onClick={closeMenu}>
                     {about}
                 </a>
-                <a class="nav-link" href="#work">
+                <a class="nav-link" href="#work" onClick={closeMenu}>
                     {work}
                 </a>
-                <a class="nav-link" href="#credential">
+                <a class="nav-link" href="#credential" onClick={closeMenu}>
                     {credential}
                 </a>
-                <a class="nav-link" href="#contact">
+                <a class="nav-link" href="#contact" onClick={closeMenu}>
                     {contact}
                 </a>
             </nav>
