@@ -59,6 +59,7 @@ function CredentialSection() {
                                     className="certification-link"
                                     href={pd1Link}
                                     target="_blank"
+                                    rel="noreferrer"
                                 >
                                     Salesforce Platform Developer I
                                 </a>
@@ -79,6 +80,7 @@ function CredentialSection() {
                                     className="certification-link"
                                     href={pd2Link}
                                     target="_blank"
+                                    rel="noreferrer"
                                 >
                                     Salesforce Platform Developer II
                                 </a>
@@ -99,6 +101,7 @@ function CredentialSection() {
                                     className="certification-link"
                                     href={jd1Link}
                                     target="_blank"
+                                    rel="noreferrer"
                                 >
                                     Salesforce JavaScript Developer I
                                 </a>
