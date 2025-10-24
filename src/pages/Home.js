@@ -6,11 +6,13 @@ import Header from "../components/Header";
 import HomeSection from "../components/HomeSection";
 import WorkSection from "../components/WorkSection";
 
+import "./Home.css";
+
 function Home() {
     return (
         <>
             <Header />
-            <main style={{ paddingTop: "90px" }}>
+            <main>
                 <HomeSection />
                 <AboutSection />
                 <WorkSection />

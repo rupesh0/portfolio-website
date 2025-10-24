@@ -127,3 +127,36 @@
     justify-content: center;
     align-items: center;
 }
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+    section {
+        padding: 28px 10px;
+        scroll-margin-top: 120px;
+    }
+
+    .contact-container {
+        padding: 24px 8px;
+    }
+}
+
+@media (max-width: 670px) {
+    section {
+        padding: 16px 2px;
+        scroll-margin-top: 140px;
+    }
+}
+
+@media (max-width: 400px) {
+    section {
+        padding: 16px 2px;
+        scroll-margin-top: 140px;
+    }
+}
+
+/* Add at the end of your CSS file */
+@media (max-width: 375px) {
+    .contact-buttons a {
+        padding: 12px 12px;
+    }
+}
