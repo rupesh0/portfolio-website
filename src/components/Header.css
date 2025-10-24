@@ -73,11 +73,24 @@ header {
     width: 100%;
 }
 
+.theme-toggle-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #e3e6ee;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
 /* Responsive Styles */
 @media (max-width: 900px) {
 }
 
-@media (max-width: 670px) {
+@media (max-width: 700px) {
     header {
         flex-direction: column;
         padding: 12px 8px;
@@ -102,6 +115,9 @@ header {
 
 /* Add at the end of your CSS file */
 @media (max-width: 375px) {
+    header {
+        align-items: start;
+    }
     .menu-icon {
         display: block;
         position: absolute;

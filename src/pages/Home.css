@@ -2,7 +2,7 @@ main {
     padding-top: 90px;
 }
 
-@media (max-width: 670px) {
+@media (max-width: 700px) {
     main {
         padding-top: 120px;
     }
