@@ -20,14 +20,14 @@ function ContactSection() {
     return (
         <section id="contact">
             <h2>{contactHeading}</h2>
-            <div class="contact-container">
-                <div class="contact-info">{contactDescription}</div>
-                <div class="contact-form">
-                    <div class="contact-item">
-                        <div class="contact-box">
+            <div className="contact-container">
+                <div className="contact-info">{contactDescription}</div>
+                <div className="contact-form">
+                    <div className="contact-item">
+                        <div className="contact-box">
                             <div>
                                 <svg
-                                    class="edu-svg"
+                                    className="edu-svg"
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 32 32"
                                 >
@@ -36,19 +36,19 @@ function ContactSection() {
                                         y="6"
                                         width="28"
                                         height="20"
-                                        class="icon-style"
+                                        className="icon-style"
                                     />
                                     <polyline
                                         points="8,12 16,19 24,12"
-                                        class="icon-style"
+                                        className="icon-style"
                                     />
                                 </svg>
                             </div>
-                            <div class="contact-box-content">
+                            <div className="contact-box-content">
                                 <h5>{email}</h5>
                                 <div>
                                     <a
-                                        class="contact-link-email"
+                                        className="contact-link-email"
                                         href={`mailto:${emailAddress}`}
                                     >
                                         {emailAddress}
@@ -56,10 +56,10 @@ function ContactSection() {
                                 </div>
                             </div>
                         </div>
-                        <div class="contact-box">
+                        <div className="contact-box">
                             <div>
                                 <svg
-                                    class="edu-svg"
+                                    className="edu-svg"
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 32 32"
                                 >
@@ -70,12 +70,12 @@ function ContactSection() {
                                     </g>
                                 </svg>
                             </div>
-                            <div class="contact-box-content">
+                            <div className="contact-box-content">
                                 <h5>{socialProfiles}</h5>
-                                <div class="social-icons">
+                                <div className="social-icons">
                                     <a href={githubLink} target="_blank">
                                         <svg
-                                            class="social-icon"
+                                            className="social-icon"
                                             fill="currentColor"
                                             viewBox="0 0 24 24"
                                         >
@@ -84,7 +84,7 @@ function ContactSection() {
                                     </a>
                                     <a href={linkedInLink} target="_blank">
                                         <svg
-                                            class="social-icon"
+                                            className="social-icon"
                                             fill="currentColor"
                                             viewBox="0 0 24 24"
                                         >
@@ -95,9 +95,9 @@ function ContactSection() {
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             fill="#000000"
-                                            class="social-icon"
+                                            className="social-icon"
                                             viewBox="0 0 52 52"
-                                            enable-background="new 0 0 52 52"
+                                            enableBackground="new 0 0 52 52"
                                         >
                                             <g>
                                                 <polygon points="12.3,37 9.7,40 14.8,40  " />
@@ -113,11 +113,11 @@ function ContactSection() {
                             </div>
                         </div>
                     </div>
-                    <div class="contact-button-group">
-                        <div class="contact-buttons">
+                    <div className="contact-button-group">
+                        <div className="contact-buttons">
                             <a href={`mailto:${emailAddress}`}>
                                 <svg
-                                    class="social-icon"
+                                    className="social-icon"
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 32 32"
                                 >
@@ -126,18 +126,18 @@ function ContactSection() {
                                         y="6"
                                         width="28"
                                         height="20"
-                                        class="icon-style"
+                                        className="icon-style"
                                     />
                                     <polyline
                                         points="8,12 16,19 24,12"
-                                        class="icon-style"
+                                        className="icon-style"
                                     />
                                 </svg>
                                 <span>{emailMe}</span>
                             </a>
                             <a href={linkedInLink} target="_blank">
                                 <svg
-                                    class="social-icon"
+                                    className="social-icon"
                                     fill="currentColor"
                                     viewBox="0 0 24 24"
                                 >
@@ -146,12 +146,12 @@ function ContactSection() {
                                 <span>{linkedIn}</span>
                             </a>
                         </div>
-                        <div class="contact-buttons">
+                        <div className="contact-buttons">
                             <a href={resumeLink} target="_blank">
                                 <svg
-                                    class="social-icon"
+                                    className="social-icon"
                                     xmlns="http://www.w3.org/2000/svg"
-                                    fill-rule="evenodd"
+                                    fillRule="evenodd"
                                     viewBox="0 0 512 512.001"
                                 >
                                     <path d="M145.228 0h221.545c39.962 0 76.279 16.334 102.59 42.638C495.666 68.942 512 105.262 512 145.224v221.549c0 39.962-16.334 76.279-42.637 102.59-26.311 26.303-62.624 42.638-102.59 42.638H145.228c-39.962 0-76.279-16.335-102.59-42.638C16.334 443.052 0 406.735 0 366.773V145.224c0-39.962 16.334-76.282 42.638-102.586C68.949 16.334 105.266 0 145.228 0zM202.9 215.333c-4.071.172-6.963 1.523-8.631 4.063-4.531 6.793 1.65 13.502 5.943 18.232 12.174 13.362 42.015 45.476 48.023 52.542 4.553 5.036 11.036 5.036 15.592 0 6.206-7.25 37.545-40.826 49.118-53.825 4.015-4.52 8.982-10.69 4.801-16.949-1.707-2.54-4.571-3.891-8.641-4.063H284.39V154.11c0-6.523-5.353-11.875-11.879-11.875h-33.007c-6.53 0-11.878 5.345-11.878 11.875v61.223H202.9zm-79.47 67.616c-3.782-15.646 19.91-21.387 23.689-5.734 1.581 6.526 2.939 13.089 4.246 19.676 2.438 12.315 4.243 20.034 8.788 23.88 4.816 4.074 13.918 5.482 31.368 5.482h132.085c16.107 0 24.514-1.542 28.933-5.54 4.257-3.846 5.925-11.381 8.086-22.947l.047-.226c1.271-6.804 2.586-13.601 4.221-20.325 3.778-15.639 27.446-9.919 23.689 5.705l-.007.025c-1.542 6.397-2.77 12.823-3.969 19.288l-.004.025c-3.184 17.037-5.788 28.724-14.523 36.936-8.604 8.086-22.082 11.508-46.473 11.508H191.521c-25.5 0-39.515-3.069-48.527-11.05-9.238-8.183-12.04-20.058-15.606-38.082-1.235-6.227-2.464-12.451-3.958-18.621zm21.798-256.764h221.545c65.477 0 119.043 53.566 119.043 119.039v221.549c0 65.477-53.566 119.043-119.043 119.043H145.228c-65.477 0-119.043-53.566-119.043-119.043V145.224c0-65.473 53.566-119.039 119.043-119.039z" />

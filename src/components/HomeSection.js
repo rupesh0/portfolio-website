@@ -15,21 +15,25 @@ function HomeSection() {
     } = HOME_TEXTS;
 
     return (
-        <section id="home" class="home-container">
-            <div class="home-left">
-                <img class="profile-pic" src={rupeshPic} alt={profilePicAlt} />
+        <section id="home" className="home-container">
+            <div className="home-left">
+                <img
+                    className="profile-pic"
+                    src={rupeshPic}
+                    alt={profilePicAlt}
+                />
             </div>
-            <div class="home-right">
-                <div class="greeting">{greeting}</div>
-                <div class="name">
+            <div className="home-right">
+                <div className="greeting">{greeting}</div>
+                <div className="name">
                     {intro1} <span>{intro2}</span>
                 </div>
-                <div class="role">{role}</div>
+                <div className="role">{role}</div>
                 <p>{description}</p>
-                <div class="role">{technicalSkills}</div>
-                <div class="skills">
+                <div className="role">{technicalSkills}</div>
+                <div className="skills">
                     {SKILLS.map((skill, index) => (
-                        <div class="skill" key={index}>
+                        <div className="skill" key={index}>
                             {skill}
                         </div>
                     ))}
