@@ -5,16 +5,16 @@
 }
 
 .experience-item {
-    background: rgba(36, 40, 56, 0.92);
+    background: var(--panel-bg);
     border-radius: 14px;
-    border: 2px solid #6dd5ed;
-    box-shadow: 0 2px 16px #6dd5ed40;
+    border: 2px solid var(--accent);
+    box-shadow: 0 2px 16px rgba(var(--accent-rgb), 0.25);
     padding: 18px 20px;
     transition: border 0.3s, box-shadow 0.3s;
 }
 .experience-item:hover {
-    border-color: #b366f6;
-    box-shadow: 0 6px 32px #b366f6a0;
+    border-color: var(--accent-3);
+    box-shadow: 0 6px 32px rgba(var(--accent-3-rgb), 0.63);
 }
 
 .experience-details {
@@ -28,29 +28,29 @@
 .experience-company-post h3 {
     font-size: 1.3rem;
     font-weight: 700;
-    color: #6dd5ed;
+    color: var(--accent);
 }
 .experience-company-post h4 {
     font-size: 1.1rem;
     font-weight: 600;
-    color: #b366f6;
+    color: var(--accent-3);
 }
 .experience-duration {
     display: flex;
     align-items: center;
     gap: 6px;
-    background: #23283b;
+    background: var(--panel-bg);
     border-radius: 8px;
     padding: 6px 12px;
-    border: 1px solid #b366f6;
-    color: #e3e6ee;
+    border: 1px solid var(--accent-3);
+    color: var(--text);
     font-size: 0.98rem;
 }
 
 .work-svg {
     width: 1.2rem;
     height: 1.2rem;
-    color: #6dd5ed;
+    color: var(--accent);
 }
 
 .experience-responsibility-list {
@@ -64,12 +64,12 @@
     gap: 10px;
     margin-bottom: 8px;
     font-size: 1rem;
-    color: #e3e6ee;
+    color: var(--text);
     transition: color 0.2s;
 }
 
 .experience-responsibility-list li:hover span {
-    color: #b366f6;
+    color: var(--accent-3);
     filter: contrast(20);
 }
 

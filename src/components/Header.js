@@ -10,10 +10,15 @@ function Header() {
 
     const [menuOpen, setMenuOpen] = useState(false);
     const [theme, setTheme] = useState(() => {
-        return (
+        const theme =
             localStorage.getItem(LOCAL_STORAGE_BUCKET) ||
-            window.matchMedia("(prefers-color-scheme: dark)").matches
-        );
+            (window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light");
+
+        document.documentElement.setAttribute("data-theme", theme);
+
+        return theme;
     });
 
     const closeMenu = () => {
@@ -28,11 +33,7 @@ function Header() {
         const newTheme = theme === "dark" ? "light" : "dark";
         setTheme(newTheme);
         localStorage.setItem(LOCAL_STORAGE_BUCKET, newTheme);
-        document.documentElement.classList.remove(
-            "prettier-dark",
-            "prettier-light"
-        );
-        document.documentElement.classList.add(`prettier-${newTheme}`);
+        document.documentElement.setAttribute("data-theme", newTheme);
     };
 
     return (
@@ -47,20 +48,26 @@ function Header() {
             </div>
             <button className="menu-icon" id="menuToggle" onClick={toggleMenu}>
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                    <rect y="7" width="32" height="3" rx="1.5" fill="#b366f6" />
+                    <rect
+                        y="7"
+                        width="32"
+                        height="3"
+                        rx="1.5"
+                        fill="currentColor"
+                    />
                     <rect
                         y="15"
                         width="32"
                         height="3"
                         rx="1.5"
-                        fill="#b366f6"
+                        fill="currentColor"
                     />
                     <rect
                         y="23"
                         width="32"
                         height="3"
                         rx="1.5"
-                        fill="#b366f6"
+                        fill="currentColor"
                     />
                 </svg>
             </button>

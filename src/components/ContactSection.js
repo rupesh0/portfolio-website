@@ -106,7 +106,7 @@ function ContactSection() {
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
-                                            fill="#000000"
+                                            fill="currentColor"
                                             className="social-icon"
                                             viewBox="0 0 52 52"
                                             enableBackground="new 0 0 52 52"

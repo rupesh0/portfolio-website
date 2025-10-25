@@ -1,12 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap");
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Inter", Arial, sans-serif;
+}
+
+:root {
+    --font-sans: "Inter", Arial, sans-serif;
+    --font-heading: "Poppins", var(--font-sans);
+}
+
+[data-theme="dark"] {
+    --bg: #0f1115;
+    --page-bg-color: linear-gradient(120deg, #181c24 0%, #23283b 100%);
+    --text: #e3e6ee;
+
+    --panel-bg: rgba(36, 40, 56, 0.92);
+    --panel-bg-2: rgb(124, 124, 161);
+    --panel-border: rgba(255, 255, 255, 0.04);
+    --panel-border-rgb: 255, 255, 255;
+    --panel-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+
+    --accent: #6dd5ed;
+    --accent-rgb: 109, 213, 237;
+    --accent-2: #ffb347;
+    --accent-2-rgb: 255, 179, 71;
+    --accent-3: #b366f6;
+    --accent-3-rgb: 179, 102, 246;
+    --accent-4: #ff6e7f;
+    --accent-4-rgb: 255, 110, 127;
+    --accent-5: #6dd5ed;
+    --accent-5-rgb: 109, 213, 237;
+
+    --fill-icon: white;
+}
+
+[data-theme="light"] {
+    --bg: #f6f7fb;
+    --page-bg-color: linear-gradient(120deg, #f6f7fb 0%, #eef1f6 100%);
+    --text: #23283b;
+
+    --panel-bg: rgba(255, 255, 255, 0.95);
+    --panel-bg-2: rgb(60, 60, 60);
+    --panel-border: rgba(35, 40, 59, 0.06);
+    --panel-border-rgb: 35, 40, 59;
+    --panel-shadow: 0 8px 24px rgba(35, 40, 59, 0.06);
+
+    --accent: #2b9cdb;
+    --accent-rgb: 43, 156, 219;
+    --accent-2: #ffb347;
+    --accent-2-rgb: 255, 179, 71;
+    --accent-3: #6b46ff;
+    --accent-3-rgb: 107, 70, 255;
+    --accent-4: #ff6e7f;
+    --accent-4-rgb: 255, 110, 127;
+    --accent-5: #6b46ff;
+    --accent-5-rgb: 70, 70, 255;
+
+    --fill-icon: white;
 }
 
 body {
-    background: linear-gradient(120deg, #181c24 0%, #23283b 100%);
-    color: #e3e6ee;
+    font-family: var(--font-sans);
+    background: var(--page-bg-color);
+    color: var(--text);
     min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+:focus {
+    outline: 2px solid rgba(var(--panel-border-rgb), 0.12);
+    outline-offset: 2px;
 }

@@ -1,25 +1,25 @@
 .about-me-container {
-    background: rgba(36, 40, 56, 0.92);
+    background: var(--panel-bg);
     border-radius: 16px;
-    border: 2px solid #6dd5ed;
+    border: 2px solid var(--accent);
     padding: 2rem;
-    box-shadow: 0 2px 16px #6dd5ed40;
+    box-shadow: 0 2px 16px rgba(var(--accent-rgb), 0.25);
     transition: border 0.3s;
 }
 .about-me-container:hover {
-    border-color: #b366f6;
-    box-shadow: 0 6px 32px #b366f6a0;
+    border-color: var(--accent-3);
+    box-shadow: 0 6px 32px rgba(var(--accent-3-rgb), 0.63);
 }
 
 .about-me-container p {
     font-size: 1.08rem;
     line-height: 1.7rem;
-    color: #e3e6ee;
+    color: var(--text);
     margin-bottom: 1rem;
     transition: color 0.2s;
 }
 .about-me-container p:hover {
-    color: #b366f6;
+    color: var(--accent-3);
     filter: contrast(20);
 }
 

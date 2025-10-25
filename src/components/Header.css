@@ -1,6 +1,6 @@
 header {
-    background: rgba(24, 28, 36, 0.98);
-    color: #fff;
+    background: var(--panel-bg);
+    color: var(--text);
     padding: 18px 32px;
     display: flex;
     align-items: center;
@@ -8,8 +8,8 @@ header {
     position: fixed;
     width: 100%;
     z-index: 100;
-    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.15);
-    border-bottom: 1px solid #23283b;
+    box-shadow: var(--panel-shadow);
+    border-bottom: 1px solid var(--panel-border);
 }
 
 .logo {
@@ -17,7 +17,12 @@ header {
     font-size: 2rem;
     letter-spacing: 8px;
     text-decoration: none;
-    background: linear-gradient(90deg, #6dd5ed 0%, #b366f6 50%, #ff6e7f 100%);
+    background: linear-gradient(
+        90deg,
+        var(--accent) 0%,
+        var(--accent-3) 50%,
+        var(--accent-4) 100%
+    );
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -46,7 +51,7 @@ header {
 }
 .nav-link {
     font-size: 1.1rem;
-    color: #e3e6ee;
+    color: var(--text);
     text-decoration: none;
     position: relative;
     padding: 6px 0;
@@ -59,12 +64,17 @@ header {
     bottom: -4px;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, #6dd5ed, #b366f6, #ff6e7f);
+    background: linear-gradient(
+        90deg,
+        var(--accent),
+        var(--accent-3),
+        var(--accent-4)
+    );
     transition: width 0.3s;
     border-radius: 2px;
 }
 .nav-link:hover {
-    color: white;
+    color: var(--text);
     transform: scale(1.05);
     filter: contrast(2);
     transition: all 0.1s linear;
@@ -78,7 +88,7 @@ header {
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
-    color: #e3e6ee;
+    color: var(--text);
 }
 
 .header-content {
@@ -133,9 +143,9 @@ header {
         position: absolute;
         top: 60px;
         right: 10px;
-        background: rgba(32, 36, 48, 0.98);
+        background: var(--panel-bg);
         border-radius: 10px;
-        box-shadow: 0 4px 24px #23283b80;
+        box-shadow: 0 4px 24px rgba(var(--panel-border-rgb), 0.5);
         padding: 18px 24px;
         gap: 1.2rem;
         min-width: 140px;
