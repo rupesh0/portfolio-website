@@ -1,3 +1,6 @@
+import pd1Link from "../../assets/certificates/sf-pd1.pdf";
+import pd2Link from "../../assets/certificates/sf-pd2.pdf";
+import jd1Link from "../../assets/certificates/sf-jd1.pdf";
 /**
  * Header Component Texts in English
  */
@@ -111,9 +114,9 @@ const WORK_EXPERIENCE_TEXTS = {
  */
 
 const CERTIFICATIONS = [
-    "Salesforce Platform Developer I",
-    "Salesforce Platform Developer II",
-    "Salesforce JavaScript Developer I",
+    { name: "Salesforce Platform Developer I", link: pd1Link },
+    { name: "Salesforce Platform Developer II", link: pd2Link },
+    { name: "Salesforce JavaScript Developer I", link: jd1Link },
 ];
 
 const EDUCATIONS = [

@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import "./Header.css";
-import { HEADER_TEXTS } from "../textHelper/i18n";
+import { HEADER_TEXTS } from "../dataModeling/i18n";
 
 const LOCAL_STORAGE_BUCKET = "portfolio-website-theme";
 

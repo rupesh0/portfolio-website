@@ -1,5 +1,5 @@
 import "./AboutSection.css";
-import { ABOUT_ME_TEXTS } from "../textHelper/i18n";
+import { ABOUT_ME_TEXTS } from "../dataModeling/i18n";
 
 function AboutSection() {
     const { aboutMeHeading, aboutMeParagraphs: ABOUT_ME } = ABOUT_ME_TEXTS;

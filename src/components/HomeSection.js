@@ -1,6 +1,6 @@
 import "./HomeSection.css";
 import rupeshPic from "../assets/images/rupesh.jpg";
-import { HOME_TEXTS } from "../textHelper/i18n";
+import { HOME_TEXTS } from "../dataModeling/i18n";
 
 function HomeSection() {
     const {

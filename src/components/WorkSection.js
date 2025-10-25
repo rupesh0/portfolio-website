@@ -1,5 +1,5 @@
 import "./WorkSection.css";
-import { WORK_EXPERIENCE_TEXTS } from "../textHelper/i18n";
+import { WORK_EXPERIENCE_TEXTS } from "../dataModeling/i18n";
 
 function WorkSection() {
     const { workExperienceHeading, workExperiences: WORK_EXPERIENCES } =

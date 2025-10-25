@@ -1,4 +1,4 @@
-import { FOOTER_TEXTS } from "../textHelper/i18n";
+import { FOOTER_TEXTS } from "../dataModeling/i18n";
 import "./Footer.css";
 
 function Footer() {

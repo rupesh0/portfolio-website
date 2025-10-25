@@ -1,6 +1,6 @@
-import * as EnglishTexts from "../textHelper/english";
-import * as hindiTexts from "../textHelper/hindi";
-import * as spanishTexts from "../textHelper/spanish";
+import * as EnglishTexts from "./texts/english.js";
+import * as hindiTexts from "./texts/hindi.js";
+import * as spanishTexts from "./texts/spanish.js";
 
 const getBrowserLanguage = () => {
     const lang = navigator.language || navigator.userLanguage;
