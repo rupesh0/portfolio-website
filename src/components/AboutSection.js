@@ -49,10 +49,10 @@ function AboutSection() {
         <section id="about" className="about-section">
             <div className="section-wrapper">
                 <div className="section-header">
-                    <span className="kicker">Background & Approach</span>
                     <h2 className="section-title">{heading}</h2>
                     <p className="section-subtitle">{subheading}</p>
                 </div>
+
 
                 <div className="about-grid">
                     {/* Left Column: Narrative */}

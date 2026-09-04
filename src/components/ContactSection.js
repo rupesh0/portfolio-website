@@ -76,10 +76,10 @@ function ContactSection() {
         <section id="contact" className="contact-section">
             <div className="section-wrapper">
                 <div className="section-header">
-                    <span className="kicker">Get In Touch</span>
                     <h2 className="section-title">{heading}</h2>
                     <p className="section-subtitle">{subheading}</p>
                 </div>
+
 
                 <div className="contact-grid">
                     {/* Left Column: Direct Channels & Socials */}

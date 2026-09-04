@@ -43,10 +43,10 @@ function AchievementsSection() {
         <section id="achievements" className="achievements-section">
             <div className="section-wrapper">
                 <div className="section-header">
-                    <span className="kicker">Honors & Impact</span>
                     <h2 className="section-title">{heading}</h2>
                     <p className="section-subtitle">{subheading}</p>
                 </div>
+
 
                 <div className="achievements-grid">
                     {achievements.map((item) => (

@@ -8,10 +8,10 @@ function ProjectsSection() {
         <section id="projects" className="projects-section">
             <div className="section-wrapper">
                 <div className="section-header">
-                    <span className="kicker">Practical Architecture</span>
                     <h2 className="section-title">{heading}</h2>
                     <p className="section-subtitle">{subheading}</p>
                 </div>
+
 
                 <div className="projects-grid">
                     {projects.map((proj) => (

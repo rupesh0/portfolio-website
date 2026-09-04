@@ -115,33 +115,6 @@
     color: var(--text-primary);
 }
 
-.skill-level {
-    font-size: 0.7rem;
-    font-family: var(--font-mono);
-    font-weight: 600;
-    padding: 0.15rem 0.45rem;
-    border-radius: var(--border-radius-full);
-}
-
-.level-expert {
-    background: rgba(0, 161, 224, 0.12);
-    color: var(--accent-blue);
-}
-
-.level-specialist {
-    background: rgba(139, 92, 246, 0.12);
-    color: var(--accent-purple);
-}
-
-.level-advanced {
-    background: rgba(16, 185, 129, 0.12);
-    color: var(--accent-emerald);
-}
-
-.level-intermediate {
-    background: rgba(245, 158, 11, 0.12);
-    color: var(--accent-amber);
-}
 
 @media (max-width: 1024px) {
     .skills-categories-grid {

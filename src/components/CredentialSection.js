@@ -24,10 +24,10 @@ function CredentialSection() {
         <section id="credentials" className="credentials-section">
             <div className="section-wrapper">
                 <div className="section-header">
-                    <span className="kicker">Credentials & Education</span>
                     <h2 className="section-title">{heading}</h2>
                     <p className="section-subtitle">{subheading}</p>
                 </div>
+
 
                 {/* Subheading: Certifications */}
                 <div style={{ textAlign: "center", marginBottom: "2rem" }}>

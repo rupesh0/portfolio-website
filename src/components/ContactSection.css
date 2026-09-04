@@ -4,6 +4,10 @@
     position: relative;
 }
 
+.contact-section .section-wrapper {
+    padding-bottom: 2.25rem;
+}
+
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1.15fr;

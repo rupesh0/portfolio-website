@@ -5,7 +5,6 @@ import { HOME_TEXTS } from "../dataModeling/i18n";
 function HomeSection() {
     const {
         profilePicAlt,
-        statusBadge,
         greeting,
         name,
         title,
@@ -27,12 +26,8 @@ function HomeSection() {
                 <div className="hero-content">
                     {/* Left Column: Introductions & CTAs */}
                     <div className="hero-left">
-                        <div className="hero-status-pill">
-                            <span className="status-dot"></span>
-                            <span>{statusBadge}</span>
-                        </div>
-
                         <div className="hero-greeting">{greeting}</div>
+
 
                         <h1 className="hero-name">{name}</h1>
 

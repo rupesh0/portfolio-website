@@ -8,10 +8,10 @@ function WorkSection() {
         <section id="experience" className="experience-section">
             <div className="section-wrapper">
                 <div className="section-header">
-                    <span className="kicker">Career Trajectory</span>
                     <h2 className="section-title">{heading}</h2>
                     <p className="section-subtitle">{subheading}</p>
                 </div>
+
 
                 <div className="timeline-container">
                     {workExperiences.map((exp, index) => (

@@ -1,6 +1,4 @@
-import pd1Link from "../../assets/certificates/sf-pd1.pdf";
-import pd2Link from "../../assets/certificates/sf-pd2.pdf";
-import jd1Link from "../../assets/certificates/sf-jd1.pdf";
+
 import resumePdf from "../../assets/resume.pdf";
 
 /**
@@ -386,8 +384,7 @@ const CERTIFICATIONS = [
         issuer: "Salesforce",
         year: "2024",
         badgeColor: "#7C3AED",
-        link: pd2Link,
-        verifiedUrl: "https://www.salesforce.com/trailblazer/rprajapat29",
+        link: "https://www.salesforce.com/trailblazer/rprajapat29",
         description: "Advanced Apex programming, complex integration patterns, enterprise data modeling, and performance optimization at scale.",
     },
     {
@@ -396,8 +393,7 @@ const CERTIFICATIONS = [
         issuer: "Salesforce",
         year: "2023",
         badgeColor: "#F59E0B",
-        link: jd1Link,
-        verifiedUrl: "https://www.salesforce.com/trailblazer/rprajapat29",
+        link: "https://www.salesforce.com/trailblazer/rprajapat29",
         description: "Modern JavaScript (ES6+), asynchronous design patterns, DOM manipulation, and frontend architecture for Lightning Web Components.",
     },
     {
@@ -406,8 +402,7 @@ const CERTIFICATIONS = [
         issuer: "Salesforce",
         year: "2021",
         badgeColor: "#10B981",
-        link: pd1Link,
-        verifiedUrl: "https://www.salesforce.com/trailblazer/rprajapat29",
+        link: "https://www.salesforce.com/trailblazer/rprajapat29",
         description: "Foundational mastery of programmatic customization on the Salesforce platform, including Apex triggers, SOQL/SOSL, and basic components.",
     },
     {
@@ -415,7 +410,7 @@ const CERTIFICATIONS = [
         name: "HackerRank JavaScript (Basic & Intermediate)",
         issuer: "HackerRank",
         badgeColor: "#00EA64",
-        link: "https://www.hackerrank.com",
+        link: "https://www.hackerrank.com/profile/rp15498",
         description: "Demonstrated intermediate proficiency in core JavaScript data structures, closures, event loop, and algorithmic problem solving.",
     },
     {
@@ -423,7 +418,7 @@ const CERTIFICATIONS = [
         name: "HackerRank Problem Solving (Basic & Intermediate)",
         issuer: "HackerRank",
         badgeColor: "#00EA64",
-        link: "https://www.hackerrank.com",
+        link: "https://www.hackerrank.com/profile/rp15498",
         description: "Validated algorithmic reasoning, data structures (stacks, queues, trees), dynamic programming, and computational problem solving.",
     },
     {
@@ -431,7 +426,7 @@ const CERTIFICATIONS = [
         name: "HackerRank Java (Basic)",
         issuer: "HackerRank",
         badgeColor: "#00EA64",
-        link: "https://www.hackerrank.com",
+        link: "https://www.hackerrank.com/profile/rp15498",
         description: "Core object-oriented programming in Java, inheritance, polymorphism, and Java standard library mastery.",
     },
 ];
@@ -491,7 +486,6 @@ const FOOTER_TEXTS = {
     brand: "Rupesh Prajapat",
     tagline: "Senior Salesforce Developer | Certinia PSA Specialist",
     copyright: "© 2026 Rupesh Prajapat. All rights reserved.",
-    craftedWith: "Built with React & Vanilla CSS — Optimized for Production.",
 };
 
 export {
