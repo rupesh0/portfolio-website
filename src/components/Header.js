@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./Header.css";
-import rupeshLogo from "../assets/images/rupesh_logo.jpeg";
+import rupeshLogo from "../assets/images/rupesh_logo.png";
 import { HEADER_TEXTS, HOME_TEXTS } from "../dataModeling/i18n";
 
 const THEME_KEY = "rupesh-portfolio-theme";
