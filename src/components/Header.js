@@ -1,14 +1,12 @@
 import { useState, useEffect } from "react";
 import "./Header.css";
+import rupeshLogo from "../assets/images/rupesh_logo.jpeg";
 import { HEADER_TEXTS, HOME_TEXTS } from "../dataModeling/i18n";
 
 const THEME_KEY = "rupesh-portfolio-theme";
 
 function Header() {
     const {
-        name,
-        initials,
-        roleBadge,
         home,
         about,
         skills,
@@ -19,6 +17,7 @@ function Header() {
         contact,
         resumeButton,
     } = HEADER_TEXTS;
+
 
     const [isScrolled, setIsScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -104,14 +103,15 @@ function Header() {
     return (
         <header className={`site-header ${isScrolled ? "scrolled" : ""}`}>
             <div className="header-inner">
-                {/* Brand Monogram & Name */}
-                <a href="#home" className="brand-logo" onClick={() => handleNavClick("home")}>
-                    <div className="brand-monogram">{initials}</div>
-                    <div className="brand-text">
-                        <span className="brand-name">{name}</span>
-                        <span className="brand-role">{roleBadge}</span>
-                    </div>
+                {/* Brand Logo Image */}
+                <a href="#home" className="brand-logo" onClick={() => handleNavClick("home")} aria-label="Rupesh Prajapat - Home">
+                    <img
+                        src={rupeshLogo}
+                        alt="Rupesh"
+                        className="brand-logo-img"
+                    />
                 </a>
+
 
                 {/* Desktop Navigation */}
                 <nav className="nav-desktop" aria-label="Main Navigation">
