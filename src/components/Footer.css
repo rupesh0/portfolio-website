@@ -1,8 +1,121 @@
-footer {
-    text-align: center;
-    padding: 18px 0;
-    background: var(--panel-bg);
-    font-size: 1rem;
-    border-top: 1px solid var(--panel-border);
-    margin-top: 32px;
+.site-footer {
+    background: var(--bg-base);
+    border-top: 1px solid var(--border-subtle);
+    padding: 4.5rem 1.75rem 2.5rem;
+    position: relative;
+}
+
+.footer-inner {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.footer-top-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2.5rem;
+}
+
+.footer-brand-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    max-width: 360px;
+}
+
+.footer-brand-name {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+}
+
+.footer-tagline {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.footer-nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer-link {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer-link:hover {
+    color: var(--accent-blue);
+}
+
+.footer-social-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-social-icon-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: var(--border-radius-full);
+    background: var(--bg-surface-elevated);
+    border: 1px solid var(--border-subtle);
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-fast);
+}
+
+.footer-social-icon-btn:hover {
+    color: var(--accent-blue);
+    border-color: var(--border-hover);
+    transform: translateY(-2px);
+}
+
+.footer-bottom-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-subtle);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.back-to-top-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.84rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.back-to-top-btn:hover {
+    color: var(--accent-blue);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .footer-top-row {
+        flex-direction: column;
+    }
 }

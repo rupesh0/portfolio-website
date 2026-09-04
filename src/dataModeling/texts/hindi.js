@@ -5,6 +5,12 @@
 import pd1Link from "../../assets/certificates/sf-pd1.pdf";
 import pd2Link from "../../assets/certificates/sf-pd2.pdf";
 import jd1Link from "../../assets/certificates/sf-jd1.pdf";
+import {
+    SKILLS_TEXTS,
+    PROJECTS_TEXTS,
+    ACHIEVEMENTS_TEXTS,
+} from "./english.js";
+
 
 /**
  * Header Component Texts in Hindi
@@ -203,8 +209,12 @@ export {
     HEADER_TEXTS,
     HOME_TEXTS,
     ABOUT_ME_TEXTS,
+    SKILLS_TEXTS,
     WORK_EXPERIENCE_TEXTS,
+    PROJECTS_TEXTS,
+    ACHIEVEMENTS_TEXTS,
     CREDENTIAL_TEXTS,
     CONTACT_TEXTS,
     FOOTER_TEXTS,
 };
+

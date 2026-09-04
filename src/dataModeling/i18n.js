@@ -3,10 +3,14 @@ import * as hindiTexts from "./texts/hindi.js";
 import * as spanishTexts from "./texts/spanish.js";
 
 const getBrowserLanguage = () => {
-    const lang = navigator.language || navigator.userLanguage;
-    if (lang.startsWith("hi")) return "hindi"; // Hindi
-    if (lang.startsWith("es")) return "spanish"; // Spanish
-    return "english"; // default English
+    try {
+        const lang = navigator.language || navigator.userLanguage || "";
+        if (lang.startsWith("hi")) return "hindi";
+        if (lang.startsWith("es")) return "spanish";
+    } catch (e) {
+        // SSR or test fallback
+    }
+    return "english";
 };
 
 function getTexts(language) {
@@ -22,22 +26,16 @@ function getTexts(language) {
     }
 }
 
-const {
-    HEADER_TEXTS,
-    HOME_TEXTS,
-    ABOUT_ME_TEXTS,
-    WORK_EXPERIENCE_TEXTS,
-    CREDENTIAL_TEXTS,
-    CONTACT_TEXTS,
-    FOOTER_TEXTS,
-} = getTexts(getBrowserLanguage());
+const activeTexts = getTexts(getBrowserLanguage());
 
-export {
-    HEADER_TEXTS,
-    HOME_TEXTS,
-    ABOUT_ME_TEXTS,
-    WORK_EXPERIENCE_TEXTS,
-    CREDENTIAL_TEXTS,
-    CONTACT_TEXTS,
-    FOOTER_TEXTS,
-};
+// Fallbacks to English for any missing keys in other language packs
+export const HEADER_TEXTS = activeTexts.HEADER_TEXTS || EnglishTexts.HEADER_TEXTS;
+export const HOME_TEXTS = activeTexts.HOME_TEXTS || EnglishTexts.HOME_TEXTS;
+export const ABOUT_ME_TEXTS = activeTexts.ABOUT_ME_TEXTS || EnglishTexts.ABOUT_ME_TEXTS;
+export const SKILLS_TEXTS = activeTexts.SKILLS_TEXTS || EnglishTexts.SKILLS_TEXTS;
+export const WORK_EXPERIENCE_TEXTS = activeTexts.WORK_EXPERIENCE_TEXTS || EnglishTexts.WORK_EXPERIENCE_TEXTS;
+export const PROJECTS_TEXTS = activeTexts.PROJECTS_TEXTS || EnglishTexts.PROJECTS_TEXTS;
+export const ACHIEVEMENTS_TEXTS = activeTexts.ACHIEVEMENTS_TEXTS || EnglishTexts.ACHIEVEMENTS_TEXTS;
+export const CREDENTIAL_TEXTS = activeTexts.CREDENTIAL_TEXTS || EnglishTexts.CREDENTIAL_TEXTS;
+export const CONTACT_TEXTS = activeTexts.CONTACT_TEXTS || EnglishTexts.CONTACT_TEXTS;
+export const FOOTER_TEXTS = activeTexts.FOOTER_TEXTS || EnglishTexts.FOOTER_TEXTS;

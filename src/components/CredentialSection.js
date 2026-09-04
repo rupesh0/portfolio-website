@@ -3,107 +3,160 @@ import { CREDENTIAL_TEXTS } from "../dataModeling/i18n";
 
 function CredentialSection() {
     const {
-        credentialHeading,
+        heading,
+        subheading,
         certificationsHeading,
         educationsHeading,
-        projectsHeading,
-        certifications: CERTIFICATIONS,
-        educations: EDUCATIONS,
-        projects: PROJECTS,
+        certifications,
+        educations,
+        trailblazerUrl,
     } = CREDENTIAL_TEXTS;
 
+    const getCertIcon = (id) => {
+        if (id.includes("agentforce")) return "🤖";
+        if (id.includes("pd2")) return "⚡";
+        if (id.includes("jd1")) return "📜";
+        if (id.includes("pd1")) return "☁️";
+        return "💻";
+    };
+
     return (
-        <section id="credential">
-            <h2>{credentialHeading}</h2>
-            <div className="credential-container">
-                <div className="credential-edu-certificate">
-                    <div className="edu-container">
-                        <h3>{educationsHeading}</h3>
-                        <ul>
-                            {EDUCATIONS.map((education, index) => (
-                                <li className="edu-item" key={index}>
-                                    <svg
-                                        className="edu-svg"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path d="M21.49,10.19l-1-.55h0l-9-5-.11,0a1.06,1.06,0,0,0-.19-.06l-.19,0-.18,0a1.17,1.17,0,0,0-.2.06l-.11,0-9,5a1,1,0,0,0,0,1.74L4,12.76V17.5a3,3,0,0,0,3,3h8a3,3,0,0,0,3-3V12.76l2-1.12V14.5a1,1,0,0,0,2,0V11.06A1,1,0,0,0,21.49,10.19ZM16,17.5a1,1,0,0,1-1,1H7a1,1,0,0,1-1-1V13.87l4.51,2.5.15.06.09,0a1,1,0,0,0,.25,0h0a1,1,0,0,0,.25,0l.09,0a.47.47,0,0,0,.15-.06L16,13.87Zm-5-3.14L4.06,10.5,11,6.64l6.94,3.86Z" />
-                                    </svg>
-                                    <div className="edu-detail">
-                                        <span>{education.degree}</span>
-                                        <span>{education.additionalInfo}</span>
+        <section id="credentials" className="credentials-section">
+            <div className="section-wrapper">
+                <div className="section-header">
+                    <span className="kicker">Credentials & Education</span>
+                    <h2 className="section-title">{heading}</h2>
+                    <p className="section-subtitle">{subheading}</p>
+                </div>
+
+                {/* Subheading: Certifications */}
+                <div style={{ textAlign: "center", marginBottom: "2rem" }}>
+                    <h3 style={{ fontSize: "1.4rem", fontWeight: 700, color: "var(--text-primary)" }}>
+                        {certificationsHeading}
+                    </h3>
+                </div>
+
+                <div className="certifications-subgrid">
+                    {certifications.map((cert) => (
+                        <div key={cert.id} className="glass-card cert-card">
+                            <div>
+                                <div className="cert-header">
+                                    <div className="cert-badge-icon">
+                                        {getCertIcon(cert.id)}
                                     </div>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                    <div className="edu-container">
-                        <h3>{certificationsHeading}</h3>
-                        <ul className="certificate-list">
-                            {CERTIFICATIONS.map((certification, index) => (
-                                <li key={index}>
-                                    <svg
-                                        className="edu-svg"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 512 512"
-                                    >
-                                        <path d="M278.5757,217.6939l16.3614-.0876c10.38-10.87,22.911-23.7955,39.2874-22.8363,16.44-.8844,28.9075,11.8155,39.29,22.8363,6.9471.267,20.3583-.7648,26.861,1.662V115.1441H111.625v166.25H231.2368l8.1391-8.2255.1751-16.3625A39.4791,39.4791,0,0,1,278.5757,217.6939ZM168.5,181.206c-17.2031-.2585-17.2992-25.9712,0-26.25h175c17.1817.3044,17.2821,25.9253,0,26.25Z" />
-                                        <path d="M452.875,49.5191H59.125A13.0881,13.0881,0,0,0,46,62.5566V333.8941a13.1633,13.1633,0,0,0,13.125,13.125H234.7381c-11.63-10.2806-20.2322-23.7548-17.7628-39.375H98.5a13.1633,13.1633,0,0,1-13.125-13.125v-192.5A13.1066,13.1066,0,0,1,98.5,88.8941h315a13.1628,13.1628,0,0,1,13.125,13.125V243.8563c3.3282,7.4084,2.2174,21.2384,2.45,29.3123l11.5506,11.6371c18.4591,19.4717,12.86,46.1063-6.9129,62.2134h19.162A13.22,13.22,0,0,0,466,333.8941V62.5566A13.1446,13.1446,0,0,0,452.875,49.5191Z" />
-                                        <path d="M409.7381,407.0429l-36.2241.2628L356.8,423.7557l13.0182,35.8364a4.3744,4.3744,0,0,0,8.0749.3567l12.1573-26.0428,25.94,12.14a4.3745,4.3745,0,0,0,5.9644-5.458Z" />
-                                        <path d="M258.8006,407.0429l-12.2171,33.5453a4.3745,4.3745,0,0,0,5.9644,5.458l25.94-12.14L290.65,459.9574a4.3719,4.3719,0,0,0,8.0706-.3546l13.0182-35.7595-16.8014-16.5376Z" />
-                                        <path d="M402.93,283.9961l-.1965-27.0362a13.0986,13.0986,0,0,0-13.0011-13.0011l-27.0361-.1965-19.25-18.9729a13.0962,13.0962,0,0,0-18.3865,0l-19.2475,18.9729-27.0361.1965a13.0942,13.0942,0,0,0-13.0011,13l-.1987,27.0372-18.9718,19.2474a13.0955,13.0955,0,0,0,0,18.3876L265.5767,340.88l.1966,27.0361a13.0985,13.0985,0,0,0,13.0011,13.0011l27.0361.1966,19.25,18.9729a13.0962,13.0962,0,0,0,18.3865,0l19.2474-18.9729,27.0362-.1966a13.0969,13.0969,0,0,0,13.0011-13L402.93,340.88l18.9719-19.2485a13.0943,13.0943,0,0,0,0-18.3865Zm-68.6755,63.4417c-46.2622-1.427-46.2537-68.5794,0-70C380.5166,278.867,380.5059,346.0162,334.2544,347.4378Z" />
-                                    </svg>
+                                    <div style={{ display: "flex", gap: "0.5rem" }}>
+                                        {cert.isNew && (
+                                            <span className="pill-badge pill-badge-emerald">
+                                                New
+                                            </span>
+                                        )}
+                                        {cert.year && (
+                                            <span className="cert-meta-tag">{cert.year}</span>
+                                        )}
+                                    </div>
+                                </div>
+
+                                <div style={{ marginTop: "1rem" }}>
+                                    <h4 className="cert-name">{cert.name}</h4>
+                                    <div className="cert-issuer-row">
+                                        <span>Issued by {cert.issuer}</span>
+                                    </div>
+                                </div>
+
+                                <p className="cert-desc" style={{ marginTop: "0.75rem" }}>
+                                    {cert.description}
+                                </p>
+                            </div>
+
+                            <div className="cert-footer-links">
+                                {cert.link && (
                                     <a
-                                        className="certification-link"
-                                        href={certification.link}
+                                        href={cert.link}
                                         target="_blank"
                                         rel="noreferrer"
+                                        className="cert-verify-btn"
                                     >
-                                        {certification.name}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </div>
-                <div className="credential-projects">
-                    <h3>{projectsHeading}</h3>
-                    <ul className="project-list">
-                        {PROJECTS.map((project, index) => (
-                            <li key={index}>
-                                <svg
-                                    className="edu-svg"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 122.88 93.61"
-                                >
-                                    <path d="M115.64,35.41l3,3a2,2,0,0,1,0,2.87l-2.42,2.42a16.16,16.16,0,0,1,1.5,4h3.13a2,2,0,0,1,2,2V54a2,2,0,0,1-2,2h-3.42a16.06,16.06,0,0,1-1.77,3.88l2.22,2.21a2,2,0,0,1,0,2.87l-3,3A2,2,0,0,1,112,68l-2.42-2.42a15.63,15.63,0,0,1-4,1.5v3.13a2,2,0,0,1-2,2H99.32a2,2,0,0,1-2-2V66.75A16.45,16.45,0,0,1,93.41,65L91.2,67.2a2,2,0,0,1-2.87,0l-3-3a2,2,0,0,1,0-2.87l2.42-2.42a15.77,15.77,0,0,1-1.5-4H83.12a2,2,0,0,1-2-2V48.64a2,2,0,0,1,2-2h3.42a16.06,16.06,0,0,1,1.77-3.88L86.1,40.52a2,2,0,0,1,0-2.87l3-3a2,2,0,0,1,2.87,0l2.42,2.42a15.77,15.77,0,0,1,4-1.5V32.44a2,2,0,0,1,2-2h4.24a2,2,0,0,1,2,2v3.41a16.06,16.06,0,0,1,3.88,1.77l2.21-2.21a2,2,0,0,1,2.86,0ZM44.12,53a2.2,2.2,0,0,1-2-2.36,2.15,2.15,0,0,1,2-2.36H69.19a2.21,2.21,0,0,1,2,2.36,2.16,2.16,0,0,1-2,2.36ZM27.56,46H36a.75.75,0,0,1,.79.79v8.45A.74.74,0,0,1,36,56H27.56a.74.74,0,0,1-.79-.78V46.76a.75.75,0,0,1,.79-.79Zm0,20.85H36a.75.75,0,0,1,.79.79v8.44a.75.75,0,0,1-.79.79H27.56a.75.75,0,0,1-.79-.79V67.61a.75.75,0,0,1,.79-.79Zm16.56,7a2.2,2.2,0,0,1-2-2.35,2.15,2.15,0,0,1,2-2.36h17.1a2.2,2.2,0,0,1,2,2.36,2.15,2.15,0,0,1-2,2.35ZM30,35.17a1.35,1.35,0,0,1-1.81-.23L28,34.78l-2.52-2.59a1.43,1.43,0,0,1,.24-2,1.68,1.68,0,0,1,2.2-.08l1.34,1.42L34.17,27a1.39,1.39,0,0,1,2,.47,1.58,1.58,0,0,1-.16,2.2l-6,5.52Zm14-2c-1.1,0-1.83-1.1-1.83-2.36s.73-2.36,1.83-2.36H73a2.21,2.21,0,0,1,2,2.36,2.16,2.16,0,0,1-2,2.36ZM3.5,70.32c2.93-3.08,4.12-3.47,8.06-4.19V3c-9.19.9-8.13,9.41-8.07,17.32,0,1.06,0,1.62,0,1.88V70.32ZM15,12.09h86.23a2.36,2.36,0,0,1,1.7.71,2.4,2.4,0,0,1,.71,1.7v7H99.19V16H15V67.86h0a1.46,1.46,0,0,1-1.25,1.45C.63,71.34,0,86.9,13.37,89.13H99.19V82.6h4.47v8.6a2.41,2.41,0,0,1-.71,1.7h0a2.4,2.4,0,0,1-1.7.71h-88c-3.6,0-8.59-2.82-10.68-5.8S-.17,81.18,0,76.84V20.36C0,10.69-.1.24,13.37,0h.18A1.47,1.47,0,0,1,15,1.48V12.09ZM102,43a8.34,8.34,0,1,1-8.34,8.34A8.34,8.34,0,0,1,102,43Z" />
-                                </svg>
-                                <div className="project-detail">
-                                    <span>{project.name}</span>
-                                    <span className="project-desc">
-                                        {project.description}
-                                    </span>
-                                    <span className="project-tech">
-                                        <svg
-                                            className="edu-svg"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                        >
-                                            <path
-                                                stroke="currentColor"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                strokeWidth="2"
-                                                d="m8 8-4 4 4 4m8 0 4-4-4-4m-2-3-4 14"
-                                            />
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                            <polyline points="15 3 21 3 21 9"></polyline>
+                                            <line x1="10" y1="14" x2="21" y2="3"></line>
                                         </svg>
-                                        <span>{project.skills}</span>
-                                    </span>
+                                        <span>{cert.link.endsWith(".pdf") ? "View Certificate (PDF)" : "Verify Credential"}</span>
+                                    </a>
+                                )}
+
+                                {cert.verifiedUrl && (
+                                    <a
+                                        href={cert.verifiedUrl}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="cert-verify-btn"
+                                        style={{ background: "transparent", borderColor: "var(--border-subtle)", color: "var(--text-secondary)" }}
+                                    >
+                                        <span>Trailhead Profile</span>
+                                    </a>
+                                )}
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Subheading: Academic Education */}
+                <div style={{ textAlign: "center", marginBottom: "2rem" }}>
+                    <h3 style={{ fontSize: "1.4rem", fontWeight: 700, color: "var(--text-primary)" }}>
+                        {educationsHeading}
+                    </h3>
+                </div>
+
+                <div className="education-container">
+                    {educations.map((edu, idx) => (
+                        <div key={idx} className="glass-card education-card">
+                            <div className="edu-card-header">
+                                <div className="edu-title-box">
+                                    <h4 className="edu-degree">{edu.degree}</h4>
+                                    <span className="edu-institution">{edu.institution}</span>
                                 </div>
-                            </li>
-                        ))}
-                    </ul>
+                                <div style={{ display: "flex", gap: "0.75rem", alignItems: "center" }}>
+                                    <span className="pill-badge pill-badge-purple">{edu.score}</span>
+                                    <span className="edu-period-badge">{edu.period}</span>
+                                </div>
+                            </div>
+
+                            <ul className="edu-highlights-list">
+                                {edu.highlights.map((item, hIdx) => (
+                                    <li key={hIdx} className="edu-highlight-item">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ color: "var(--accent-blue)", flexShrink: 0, marginTop: "3px" }}>
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                        <span>{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Trailblazer Banner */}
+                <div className="trailblazer-banner">
+                    <div className="trailblazer-info">
+                        <h4 className="trailblazer-title">Official Salesforce Trailblazer Profile</h4>
+                        <p className="trailblazer-sub">
+                            View all badges, superbadges, rank, and verified Salesforce credentials on Trailhead.
+                        </p>
+                    </div>
+                    <a
+                        href={trailblazerUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="btn btn-primary"
+                    >
+                        <span>View Trailblazer Profile</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </section>
