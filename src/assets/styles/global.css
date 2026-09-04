@@ -334,3 +334,15 @@ a {
         transform: translateY(0);
     }
 }
+
+@media (max-width: 640px) {
+    .toast-notification {
+        left: 1.25rem;
+        right: 1.25rem;
+        bottom: 1.5rem;
+        justify-content: center;
+        text-align: center;
+        font-size: 0.85rem;
+        padding: 0.75rem 1rem;
+    }
+}

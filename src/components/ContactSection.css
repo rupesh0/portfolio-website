@@ -20,16 +20,18 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    min-width: 0;
 }
 
 .contact-channels-list {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
+    min-width: 0;
 }
 
 .contact-channel-card {
-    padding: 1.4rem 1.6rem;
+    padding: 1.3rem 1.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -38,11 +40,20 @@
     background: var(--bg-card);
     border: 1px solid var(--border-card);
     transition: transform var(--transition-fast), border-color var(--transition-fast);
+    min-width: 0;
 }
 
 .contact-channel-card:hover {
     transform: translateY(-2px);
     border-color: var(--border-hover);
+}
+
+.channel-main {
+    display: flex;
+    align-items: center;
+    gap: 1.15rem;
+    flex: 1;
+    min-width: 0;
 }
 
 .channel-icon-wrap {
@@ -61,11 +72,12 @@
 .channel-text-wrap {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    flex: 1;
+    min-width: 0;
 }
 
 .channel-label {
-    font-size: 0.76rem;
+    font-size: 0.74rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -73,19 +85,22 @@
 }
 
 .channel-value {
-    font-size: 0.98rem;
+    font-size: 0.95rem;
     font-weight: 600;
     color: var(--text-primary);
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .channel-actions {
     display: flex;
     align-items: center;
-    gap: 0.4rem;
+    gap: 0.45rem;
+    flex-shrink: 0;
 }
 
 .channel-action-btn {
-    padding: 0.45rem 0.8rem;
+    padding: 0.45rem 0.85rem;
     font-size: 0.8rem;
     font-weight: 600;
     border-radius: var(--border-radius-sm);
@@ -98,6 +113,7 @@
     gap: 0.35rem;
     text-decoration: none;
     transition: all var(--transition-fast);
+    white-space: nowrap;
 }
 
 .channel-action-btn:hover {
@@ -106,16 +122,35 @@
     background: var(--bg-card-hover);
 }
 
+/* Resume Card specific styling */
+.contact-channel-card.resume-card {
+    background: linear-gradient(135deg, rgba(0, 161, 224, 0.08) 0%, rgba(124, 58, 237, 0.08) 100%);
+    border-color: rgba(0, 161, 224, 0.25);
+}
+
+.resume-icon {
+    background: var(--gradient-brand) !important;
+    color: #fff !important;
+}
+
+.resume-download-btn {
+    padding: 0.5rem 1.15rem;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
 /* Social Buttons Row */
 .social-links-box {
-    margin-top: 0.75rem;
+    margin-top: 0.5rem;
     display: flex;
     flex-direction: column;
-    gap: 0.85rem;
+    gap: 0.75rem;
+    min-width: 0;
 }
 
 .social-title {
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -132,8 +167,8 @@
     display: inline-flex;
     align-items: center;
     gap: 0.65rem;
-    padding: 0.7rem 1.15rem;
-    font-size: 0.9rem;
+    padding: 0.65rem 1.1rem;
+    font-size: 0.88rem;
     font-weight: 600;
     border-radius: var(--border-radius-full);
     background: var(--bg-card);
@@ -152,8 +187,9 @@
 
 /* Contact Form Card */
 .contact-form-card {
-    padding: 2.5rem 2.2rem;
+    padding: 2.25rem 2rem;
     border-radius: var(--border-radius-lg);
+    min-width: 0;
 }
 
 .form-header-title {
@@ -167,18 +203,21 @@
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
+    width: 100%;
 }
 
 .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.25rem;
+    width: 100%;
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
     gap: 0.45rem;
+    min-width: 0;
 }
 
 .form-label {
@@ -189,6 +228,7 @@
 
 .form-input, .form-textarea {
     width: 100%;
+    box-sizing: border-box;
     padding: 0.85rem 1.1rem;
     font-family: var(--font-sans);
     font-size: 0.95rem;
@@ -217,15 +257,89 @@
     margin-top: 0.5rem;
 }
 
+/* Responsive Media Queries */
 @media (max-width: 1024px) {
     .contact-grid {
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 2.5rem;
     }
 }
 
 @media (max-width: 640px) {
+    .contact-channel-card {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.9rem;
+        padding: 1.15rem 1rem;
+    }
+
+    .channel-main {
+        width: 100%;
+        gap: 0.85rem;
+    }
+
+    .channel-value {
+        font-size: 0.88rem;
+    }
+
+    .channel-actions {
+        width: 100%;
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .channel-action-btn {
+        flex: 1;
+        justify-content: center;
+        padding: 0.55rem 0.6rem;
+    }
+
+    .resume-download-btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        padding: 0.65rem 1rem;
+    }
+
+    .social-buttons-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+    }
+
+    .social-btn {
+        padding: 0.6rem 0.4rem;
+        font-size: 0.8rem;
+        justify-content: center;
+        gap: 0.35rem;
+    }
+
+    .contact-form-card {
+        padding: 1.5rem 1.15rem;
+    }
+
     .form-row {
         grid-template-columns: 1fr;
+        gap: 1.15rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .social-buttons-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .channel-icon-wrap {
+        width: 38px;
+        height: 38px;
+        font-size: 1rem;
+    }
+
+    .contact-channel-card {
+        padding: 1rem 0.85rem;
+    }
+
+    .channel-value {
+        font-size: 0.82rem;
     }
 }
